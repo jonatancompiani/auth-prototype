@@ -1,0 +1,32 @@
+<mat-grid-list cols="1" rowHeight="30em">
+    <mat-grid-tile>
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>Login</mat-card-title>
+            </mat-card-header>
+            <br>
+            <mat-card-content>
+                <mat-form-field appearance="fill">
+                    <mat-label>Username</mat-label>
+                    <input matInput name="usename" [(ngModel)]="username">
+                </mat-form-field>
+            </mat-card-content>
+
+            <mat-card-content>
+                <mat-form-field appearance="fill">
+                    <mat-label>Password</mat-label>
+                    <input matInput value="" name="password" type="password"
+                        [(ngModel)]="password">
+                </mat-form-field>
+            </mat-card-content>
+
+            <mat-card-actions>
+                <button id="submitBtn" mat-raised-button color="primary" (click)="submit()" >Submit</button>
+            </mat-card-actions>
+
+            <mat-card-footer>
+                <span *ngIf="show"> <button mat-button color="accent">Login success !!</button></span>
+            </mat-card-footer>
+        </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>
