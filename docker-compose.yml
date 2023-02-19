@@ -1,0 +1,9 @@
+version: "3.9"
+services: 
+    app-ui:
+        container_name: app-ui
+        build: app-ui\.
+        ports: 
+            - 4200:80
+        volumes:
+            - ./logs/app-ui:/app/logs/
